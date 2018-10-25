@@ -31,7 +31,8 @@ class SessionsController < ApplicationController
   private
 
     def set_user
-      @user = User.find_by!(session_params)
+      p session_params
+      @user = User.find_by!({name: session_params[:name])
     rescue
       flash[:danger] = 'メールアドレスが違います'
       render action: 'new'

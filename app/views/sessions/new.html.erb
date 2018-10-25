@@ -1,0 +1,13 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+
+<% if flash[:danger] %>
+  <p> <%= flash[:danger] %> </p>
+<% end %>
+
+<%= form_for :session , url: {action: "create"} do |f| %>
+    <%= f.text_field :name %>
+    <%= f.password_field :password %>
+    <%= f.submit 'ログイン' %>
+
+<% end %>

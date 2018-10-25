@@ -31,7 +31,7 @@ class SessionsController < ApplicationController
   private
 
     def set_user
-      //aaaaa
+      //ばぐってる
       p session_params
       @user = User.find_by!({name: session_params[:name])
     rescue
